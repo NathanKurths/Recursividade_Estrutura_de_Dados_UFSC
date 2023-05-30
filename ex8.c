@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int imprime_reverso(int a, int *vetor);
+int imprime_reverso(int tam, int *vetor);
 
 int main()
 {
@@ -18,15 +18,15 @@ int main()
     return 0;
 }
 
-int imprime_reverso(int a, int *vetor)
+int imprime_reverso(int tam, int *vetor)
 {
-    if (a == 0)
+    if (tam == 0)
     {
         return -1;
     }
     else
     {
-        printf("[%d] ", vetor[a]);
+        printf("[%d] ", vetor[tam]);
     }
-    return imprime_reverso(a - 1, vetor);
+    return imprime_reverso(tam - 1, vetor);
 }
